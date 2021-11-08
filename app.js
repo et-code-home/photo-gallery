@@ -19,11 +19,11 @@ app.use(express.static(path.join(__dirname, '/client/build')));
 
 // Routes
 //app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/users', usersRouter);
 
 // Respond with index.html for unmatched routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build', 'index.html'));
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 module.exports = app;
