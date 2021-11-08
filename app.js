@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Location of static assets
-app.use(express.static(path.join(__dirname, '/client/build')));
+app.use(express.static(path.join(__dirname, '/client/public')));
 
 // Routes
 //app.use('/', indexRouter);
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, '/client/build')));
 
 // Respond with index.html for unmatched routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  res.sendFile(path.join(__dirname + '/client/public/index.html'));
 });
 
 module.exports = app;
